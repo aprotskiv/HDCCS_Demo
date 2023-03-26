@@ -1,0 +1,154 @@
+{
+	"app:input": {
+		"D_Pets": {
+			"dogs": false
+		},
+		"D_Family": {
+			"children": true
+		},
+		"D_General": {
+			"Q_Age": 32,
+			"Q_Job": "bank official",
+			"Q_Sex": "male",
+			"Q_Figure": "good",
+			"Q_Height": 185,
+			"Q_Religion": "protestant",
+			"Q_Nationality": "british"
+		},
+		"D_Leisure": {
+			"golf": true,
+			"riding": true,
+			"outdoor": true
+		},
+		"D_Finances": {
+			"Q_SalaryToAverageSalary": 2.88,
+			"Q_MinSpendingBudgetToAverageSalary": 0.5
+		}
+	},
+	"app:output": {
+		"p_Family": {
+			"XLS:SUM": [
+				{
+					"XLS:IF": [
+						"{app:target, D_Family, children}",
+						1,
+						0
+					]
+				},
+				{
+					"XLS:IF": [
+						"{app:target, D_Family, housekeeping}",
+						1,
+						0
+					]
+				}
+			]
+		},
+		"p_Economy": {
+			"XLS:IF": [
+				{
+					"XLS:COMPARE": {
+						"left": {
+							"XLS:DIVIDE": [
+								"{app:target, D_Finances, Q_MinSpendingBudgetToAverageSalary}",
+								"{app:input, D_Finances, Q_MinSpendingBudgetToAverageSalary}"
+							]
+						},
+						"right": 1.5,
+						"operator": "<"
+					}
+				},
+				10,
+				0
+			]
+		},
+		"p_General": {
+			"XLS:IF": [
+				{
+					"XLS:AND": [
+						{
+							"XLS:COMPARE": {
+								"left": "{app:target, D_General, Q_Sex}",
+								"right": "female",
+								"operator": "="
+							}
+						},
+						{
+							"XLS:AND": [
+								{
+									"XLS:COMPARE": {
+										"left": "{app:target, D_General, Q_Age}",
+										"right": 24,
+										"operator": ">="
+									}
+								},
+								{
+									"XLS:COMPARE": {
+										"left": "{app:target, D_General, Q_Age}",
+										"right": 28,
+										"operator": "<="
+									}
+								}
+							]
+						},
+						{
+							"XLS:OR": [
+								{
+									"XLS:COMPARE": {
+										"left": "{app:target, D_General, Q_Figure}",
+										"right": "slim",
+										"operator": "="
+									}
+								},
+								{
+									"XLS:COMPARE": {
+										"left": "{app:target, D_General, Q_Figure}",
+										"right": "good",
+										"operator": "="
+									}
+								}
+							]
+						},
+						{
+							"XLS:COMPARE": {
+								"left": "{app:target, D_General, Q_Religion}",
+								"right": "protestant",
+								"operator": "="
+							}
+						},
+						{
+							"XLS:AND": [
+								{
+									"XLS:COMPARE": {
+										"left": "{app:target, D_General, Q_Height}",
+										"right": 170,
+										"operator": ">="
+									}
+								},
+								{
+									"XLS:COMPARE": {
+										"left": "{app:target, D_General, Q_Height}",
+										"right": 180,
+										"operator": "<="
+									}
+								}
+							]
+						},
+						{
+							"XLS:COMPARE": {
+								"left": "{app:target, D_General, Q_Nationality}",
+								"right": "british",
+								"operator": "="
+							}
+						}
+					]
+				},
+				1,
+				0
+			]
+		}
+	},
+	"app:functions": {},
+	"app:variables": [],
+	"app:pathAliases": {}
+}

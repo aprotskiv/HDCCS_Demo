@@ -1,0 +1,160 @@
+{
+  "app:input": {
+    "D95971018E663A9694554A0EBE40B6B0": {
+      "80FAF311CCE7F30C94A18FF572EC851E": true
+    },
+    "D9C2B564297DE5B6CB1A7CC645B8E9F0": {
+      "8D25315E1DB81B7AF019A6344640F4FB": 25,
+      "ACED3F0B5FD5D618EB687FF4234DD4E5": "9C98D60C78AD3AEB9E5EE05842B4E4F4",
+      "25F80F1CDF2328DAA8548A9D92CCB991": "521215455ED946713C8ACA3CCBCF4BAF",
+      "AF2A6E3038ED12901B391693D383BB54": "C6941E9D93BE21567BB7AE0993B0FB96",
+      "0BFC75BB72CC455B95B45DAE2A88C319": 173,
+      "600D926EBB7803BC488782F2AF656031": "7330815CA5EA61EB4F0D8A6558EF9170",
+      "C63BCCB98838FEB74B8FA551C095AE40": "7AD1850BB0DA760048C5F21FA85CA39D"
+    },
+    "3BAE60FB95429ABDC911ED07B5B3C396": {
+      "CCA668F96C2255BC1CF5436183C55A78": true,
+      "5698C4F1F99B73808D883765F0801A87": true,
+      "EBA22AFB2DC01E5999463C1D291FCBE5": true
+    },
+    "47AB5E61143CB8BE0E7C30FD3ED83A3B": {
+      "1B4E8514603CD3B950A2CF2240379619": 3.2,
+      "2CCC6ABC64AF9DD799A2B58E0CFCE5BF": 0.5
+    }
+  },
+  "app:output": {
+    "XLS:IF": [
+      "$.['app:variables'].['5EE0C9C1022D0F677B36B6EC81A7DEF2']",
+      {
+        "BD2F7CDB8E5C35371326ACDE5458055B": "$.['app:variables'].['E00551592A853649BA636C56C314B008']",
+        "6C143951DD4EF0BF84AC9685B338A151": "$.['app:variables'].['C4E3A816576C9593428754B383F6A789']"
+      },
+      null
+    ]
+  },
+  "app:functions": {},
+  "app:variables": {
+    "5EE0C9C1022D0F677B36B6EC81A7DEF2": {
+      "XLS:AND": [
+        {
+          "XLS:COMPARE": {
+            "left": "$.['app:target'].['D9C2B564297DE5B6CB1A7CC645B8E9F0'].['25F80F1CDF2328DAA8548A9D92CCB991']",
+            "right": "7EE47F3FD1DE074BC4BCB2CE00D83C91",
+            "operator": "="
+          }
+        },
+        {
+          "XLS:AND": [
+            {
+              "XLS:COMPARE": {
+                "left": "$.['app:target'].['D9C2B564297DE5B6CB1A7CC645B8E9F0'].['8D25315E1DB81B7AF019A6344640F4FB']",
+                "right": 30,
+                "operator": ">="
+              }
+            },
+            {
+              "XLS:COMPARE": {
+                "left": "$.['app:target'].['D9C2B564297DE5B6CB1A7CC645B8E9F0'].['8D25315E1DB81B7AF019A6344640F4FB']",
+                "right": 34,
+                "operator": "<="
+              }
+            }
+          ]
+        },
+        {
+          "XLS:COMPARE": {
+            "left": "$.['app:target'].['D9C2B564297DE5B6CB1A7CC645B8E9F0'].['AF2A6E3038ED12901B391693D383BB54']",
+            "right": "610F42654FED07054BCE33585AC28BE3",
+            "operator": "="
+          }
+        },
+        {
+          "XLS:COMPARE": {
+            "left": "$.['app:target'].['D9C2B564297DE5B6CB1A7CC645B8E9F0'].['600D926EBB7803BC488782F2AF656031']",
+            "right": "7330815CA5EA61EB4F0D8A6558EF9170",
+            "operator": "="
+          }
+        },
+        {
+          "XLS:COMPARE": {
+            "left": "$.['app:target'].['47AB5E61143CB8BE0E7C30FD3ED83A3B'].['1B4E8514603CD3B950A2CF2240379619']",
+            "right": 2.4,
+            "operator": ">"
+          }
+        },
+        {
+          "XLS:COMPARE": {
+            "left": "$.['app:target'].['D9C2B564297DE5B6CB1A7CC645B8E9F0'].['0BFC75BB72CC455B95B45DAE2A88C319']",
+            "right": 175,
+            "operator": ">"
+          }
+        },
+        {
+          "XLS:COMPARE": {
+            "left": "$.['app:target'].['D9C2B564297DE5B6CB1A7CC645B8E9F0'].['C63BCCB98838FEB74B8FA551C095AE40']",
+            "right": "7AD1850BB0DA760048C5F21FA85CA39D",
+            "operator": "="
+          }
+        }
+      ]
+    },
+    "E00551592A853649BA636C56C314B008": {
+      "XLS:SUM": [
+        {
+          "XLS:IF": [
+            "$.['app:target'].['D95971018E663A9694554A0EBE40B6B0'].['80FAF311CCE7F30C94A18FF572EC851E']",
+            10,
+            0
+          ]
+        },
+        {
+          "XLS:IF": [
+            "$.['app:target'].['6C992C95DD9EB214730AE4DBF825CD90'].['7E8D2B2D8CB25C4D409F20F04893F86E']",
+            2,
+            0
+          ]
+        }
+      ]
+    },
+    "C4E3A816576C9593428754B383F6A789": {
+      "XLS:SUM": [
+        {
+          "XLS:IF": [
+            "$.['app:target'].['3BAE60FB95429ABDC911ED07B5B3C396'].['6F48CF424A376FFC051F853FB5F6220E']",
+            5,
+            0
+          ]
+        },
+        {
+          "XLS:IF": [
+            "$.['app:target'].['3BAE60FB95429ABDC911ED07B5B3C396'].['F193A2DAC36D97D7BBD8DE88890234EA']",
+            5,
+            0
+          ]
+        },
+        {
+          "XLS:IF": [
+            "$.['app:target'].['3BAE60FB95429ABDC911ED07B5B3C396'].['5698C4F1F99B73808D883765F0801A87']",
+            1,
+            0
+          ]
+        },
+        {
+          "XLS:IF": [
+            "$.['app:target'].['3BAE60FB95429ABDC911ED07B5B3C396'].['EBA22AFB2DC01E5999463C1D291FCBE5']",
+            1,
+            0
+          ]
+        },
+        {
+          "XLS:IF": [
+            "$.['app:target'].['3BAE60FB95429ABDC911ED07B5B3C396'].['CCA668F96C2255BC1CF5436183C55A78']",
+            1,
+            0
+          ]
+        }
+      ]
+    }
+  },
+  "app:pathAliases": {}
+}

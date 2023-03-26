@@ -1,0 +1,154 @@
+{
+	"app:input": {
+		"3BAE60FB95429ABDC911ED07B5B3C396": {
+			"1815683D461DB54912F9CD3E5A7868E1": true,
+			"5698C4F1F99B73808D883765F0801A87": true,
+			"DACF6A40E62A178978630C906C1ED581": true
+		},
+		"47AB5E61143CB8BE0E7C30FD3ED83A3B": {
+			"1B4E8514603CD3B950A2CF2240379619": 2.88,
+			"2CCC6ABC64AF9DD799A2B58E0CFCE5BF": 0.5
+		},
+		"6C992C95DD9EB214730AE4DBF825CD90": {
+			"7E8D2B2D8CB25C4D409F20F04893F86E": false
+		},
+		"D95971018E663A9694554A0EBE40B6B0": {
+			"80FAF311CCE7F30C94A18FF572EC851E": true
+		},
+		"D9C2B564297DE5B6CB1A7CC645B8E9F0": {
+			"0BFC75BB72CC455B95B45DAE2A88C319": 185,
+			"25F80F1CDF2328DAA8548A9D92CCB991": "7EE47F3FD1DE074BC4BCB2CE00D83C91",
+			"600D926EBB7803BC488782F2AF656031": "7330815CA5EA61EB4F0D8A6558EF9170",
+			"8D25315E1DB81B7AF019A6344640F4FB": 32,
+			"ACED3F0B5FD5D618EB687FF4234DD4E5": "14D960E6B7D083A38E1A4080CFB58879",
+			"AF2A6E3038ED12901B391693D383BB54": "610F42654FED07054BCE33585AC28BE3",
+			"C63BCCB98838FEB74B8FA551C095AE40": "7AD1850BB0DA760048C5F21FA85CA39D"
+		}
+	},
+	"app:output": {
+		"B7024784DF4A618AD639BC727E6664DF": {
+			"XLS:IF": [
+				{
+					"XLS:AND": [
+						{
+							"XLS:COMPARE": {
+								"left": "$.['app:target'].['D9C2B564297DE5B6CB1A7CC645B8E9F0'].['25F80F1CDF2328DAA8548A9D92CCB991']",
+								"right": "521215455ED946713C8ACA3CCBCF4BAF",
+								"operator": "="
+							}
+						},
+						{
+							"XLS:AND": [
+								{
+									"XLS:COMPARE": {
+										"left": "$.['app:target'].['D9C2B564297DE5B6CB1A7CC645B8E9F0'].['8D25315E1DB81B7AF019A6344640F4FB']",
+										"right": 24,
+										"operator": ">="
+									}
+								},
+								{
+									"XLS:COMPARE": {
+										"left": "$.['app:target'].['D9C2B564297DE5B6CB1A7CC645B8E9F0'].['8D25315E1DB81B7AF019A6344640F4FB']",
+										"right": 28,
+										"operator": "<="
+									}
+								}
+							]
+						},
+						{
+							"XLS:OR": [
+								{
+									"XLS:COMPARE": {
+										"left": "$.['app:target'].['D9C2B564297DE5B6CB1A7CC645B8E9F0'].['AF2A6E3038ED12901B391693D383BB54']",
+										"right": "C6941E9D93BE21567BB7AE0993B0FB96",
+										"operator": "="
+									}
+								},
+								{
+									"XLS:COMPARE": {
+										"left": "$.['app:target'].['D9C2B564297DE5B6CB1A7CC645B8E9F0'].['AF2A6E3038ED12901B391693D383BB54']",
+										"right": "610F42654FED07054BCE33585AC28BE3",
+										"operator": "="
+									}
+								}
+							]
+						},
+						{
+							"XLS:COMPARE": {
+								"left": "$.['app:target'].['D9C2B564297DE5B6CB1A7CC645B8E9F0'].['600D926EBB7803BC488782F2AF656031']",
+								"right": "7330815CA5EA61EB4F0D8A6558EF9170",
+								"operator": "="
+							}
+						},
+						{
+							"XLS:AND": [
+								{
+									"XLS:COMPARE": {
+										"left": "$.['app:target'].['D9C2B564297DE5B6CB1A7CC645B8E9F0'].['0BFC75BB72CC455B95B45DAE2A88C319']",
+										"right": 170,
+										"operator": ">="
+									}
+								},
+								{
+									"XLS:COMPARE": {
+										"left": "$.['app:target'].['D9C2B564297DE5B6CB1A7CC645B8E9F0'].['0BFC75BB72CC455B95B45DAE2A88C319']",
+										"right": 180,
+										"operator": "<="
+									}
+								}
+							]
+						},
+						{
+							"XLS:COMPARE": {
+								"left": "$.['app:target'].['D9C2B564297DE5B6CB1A7CC645B8E9F0'].['C63BCCB98838FEB74B8FA551C095AE40']",
+								"right": "7AD1850BB0DA760048C5F21FA85CA39D",
+								"operator": "="
+							}
+						}
+					]
+				},
+				1,
+				0
+			]
+		},
+		"D6FFD4EA17FB9CB90C02C62B17E149F7": {
+			"XLS:IF": [
+				{
+					"XLS:COMPARE": {
+						"left": {
+							"XLS:DIVIDE": [
+								"$.['app:target'].['47AB5E61143CB8BE0E7C30FD3ED83A3B'].['2CCC6ABC64AF9DD799A2B58E0CFCE5BF']",
+								"$.['app:input'].['47AB5E61143CB8BE0E7C30FD3ED83A3B'].['2CCC6ABC64AF9DD799A2B58E0CFCE5BF']"
+							]
+						},
+						"right": 1.5,
+						"operator": "<"
+					}
+				},
+				10,
+				0
+			]
+		},
+		"E00551592A853649BA636C56C314B008": {
+			"XLS:SUM": [
+				{
+					"XLS:IF": [
+						"$.['app:target'].['D95971018E663A9694554A0EBE40B6B0'].['80FAF311CCE7F30C94A18FF572EC851E']",
+						1,
+						0
+					]
+				},
+				{
+					"XLS:IF": [
+						"$.['app:target'].['D95971018E663A9694554A0EBE40B6B0'].['A77A7FB0FF58E8D044CF27043DD3D65C']",
+						1,
+						0
+					]
+				}
+			]
+		}
+	},
+	"app:functions": {},
+	"app:variables": [],
+	"app:pathAliases": {}
+}

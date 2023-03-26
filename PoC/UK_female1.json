@@ -1,0 +1,160 @@
+{
+	"app:input": {
+		"D_Family": {
+			"children": true
+		},
+		"D_General": {
+			"Q_Age": 25,
+			"Q_Job": "model",
+			"Q_Sex": "female",
+			"Q_Figure": "slim",
+			"Q_Height": 173,
+			"Q_Religion": "protestant",
+			"Q_Nationality": "british"
+		},
+		"D_Leisure": {
+			"bridge": true,
+			"riding": true,
+			"swimming": true
+		},
+		"D_Finances": {
+			"Q_SalaryToAverageSalary": 3.2,
+			"Q_MinSpendingBudgetToAverageSalary": 0.5
+		}
+	},
+	"app:output": {
+		"XLS:IF": [
+			"{app:variables, is_match}",
+			{
+				"Family": "{app:variables, p_Family}",
+				"Leisure": "{app:variables, p_Leisure}"
+			},
+			null
+		]
+	},
+	"app:functions": {},
+	"app:variables": {
+		"is_match": {
+			"XLS:AND": [
+				{
+					"XLS:COMPARE": {
+						"left": "{app:target, D_General, Q_Sex}",
+						"right": "male",
+						"operator": "="
+					}
+				},
+				{
+					"XLS:AND": [
+						{
+							"XLS:COMPARE": {
+								"left": "{app:target, D_General, Q_Age}",
+								"right": 30,
+								"operator": ">="
+							}
+						},
+						{
+							"XLS:COMPARE": {
+								"left": "{app:target, D_General, Q_Age}",
+								"right": 34,
+								"operator": "<="
+							}
+						}
+					]
+				},
+				{
+					"XLS:COMPARE": {
+						"left": "{app:target, D_General, Q_Figure}",
+						"right": "good",
+						"operator": "="
+					}
+				},
+				{
+					"XLS:COMPARE": {
+						"left": "{app:target, D_General, Q_Religion}",
+						"right": "protestant",
+						"operator": "="
+					}
+				},
+				{
+					"XLS:COMPARE": {
+						"left": "{app:target, D_Finances, Q_SalaryToAverageSalary}",
+						"right": 2.4,
+						"operator": ">"
+					}
+				},
+				{
+					"XLS:COMPARE": {
+						"left": "{app:target, D_General, Q_Height}",
+						"right": 175,
+						"operator": ">"
+					}
+				},
+				{
+					"XLS:COMPARE": {
+						"left": "{app:target, D_General, Q_Nationality}",
+						"right": "british",
+						"operator": "="
+					}
+				}
+			]
+		},
+		"p_Family": {
+			"XLS:SUM": [
+				{
+					"XLS:IF": [
+						"{app:target, D_Family, children}",
+						10,
+						0
+					]
+				},
+				{
+					"XLS:IF": [
+						"{app:target, D_Pets, dogs}",
+						2,
+						0
+					]
+				}
+			]
+		},
+		"p_Leisure": {
+			"XLS:SUM": [
+				{
+					"XLS:IF": [
+						"{app:target, D_Leisure, sport}",
+						5,
+						0
+					]
+				},
+				{
+					"XLS:IF": [
+						"{app:target, D_Leisure, travelling}",
+						5,
+						0
+					]
+				},
+				{
+					"XLS:IF": [
+						"{app:target, D_Leisure, riding}",
+						1,
+						0
+					]
+				},
+				{
+					"XLS:IF": [
+						"{app:target, D_Leisure, swimming}",
+						1,
+						0
+					]
+				},
+				{
+					"XLS:IF": [
+						"{app:target, D_Leisure, bridge}",
+						1,
+						0
+					]
+				}
+			]
+		}
+	},
+	"app:pathAliases": {}
+}
